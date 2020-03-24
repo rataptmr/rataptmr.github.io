@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title>
+    <link rel="icon" href="icon.jpg">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class = "ads">
+        <img id="Ad1" src="Ad1.jpg">
+        <img id="Ad2" src="Ad2.jpg">
+        <img id="Ad3" src="Ad3.jpg">
+    </div>
+    <div style="text-align: center;">
+        <script type="text/javascript">
+        
+        // PLAYER VARIABLES
+        
+        var mp3snd = "Yea.mp3";
+        var bkcolor = "000000";
+        
+        if ( navigator.userAgent.toLowerCase().indexOf( "msie" ) != -1 ) {
+        document.write('<bgsound id="bg" src="'+mp3snd+'" loop="1">');
+        }
+        else if ( navigator.userAgent.toLowerCase().indexOf( "firefox" ) != -1 ) {
+        document.write('<object id="bg" data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
+        document.write('<param name="filename" value="'+mp3snd+'">');
+        document.write('<param name="autostart" value="1">');
+        document.write('</object>');
+        }
+        else {
+        document.write('<audio id="bg" src="'+mp3snd+'" autoplay="autoplay">');
+        document.write('<object data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
+        document.write('<param name="filename" value="'+mp3snd+'">');
+        document.write('<param name="autostart" value="1">');
+        document.write('<embed height="2" width="2" src="'+mp3snd+'" pluginspage="http://www.apple.com/quicktime/download/" type="video/quicktime" controller="false" controls="false" autoplay="true" autostart="true" loop="false" bgcolor="#'+bkcolor+'"><br>');
+        document.write('</embed></object>');
+        document.write('</audio>');
+        }
+        
+        </script>
+        <br>
+        </div>
+        IF THE MUSIC ISN't PLAYING!  (WARNING: LOUDER THAN SOUND CLIPS!)
+        <audio controls="controls" id="nonstop"><source src="Yea.mp3" type="audio/mpeg" /></audio>
+        <div></div>
+        <audio id="L00k" src="L00k.mp3"></audio>
+        <audio id="Knees" src="Knees.mp3"></audio>
+        <audio id="Listen" src="Listen.mp3"></audio>
+
+        <button onclick="playSound1()">L00k me in the eye!</button><br />
+        <audio controls="controls"><source src="L00k.mp3" type="audio/mpeg" /></audio>
+        <div></div>
+        <button onclick="playSound2()">Get on your knees!</button><br />
+        <audio controls="controls"><source src="Knees.mp3" type="audio/mpeg" /></audio>
+        <div></div>
+        <button onclick="playSound3()">Listen up!</button><br />
+        <audio controls="controls"><source src="Listen.mp3" type="audio/mpeg" /></audio>
+
+        <script type="text/javascript">
+        var audio1 = document.getElementById('L00k');
+        var audio2 = document.getElementById('Knees');
+        var audio3 = document.getElementById('Listen');
+        function playSound1(){
+            alert("click the audio player to hear the clip!");
+        }
+        function playSound2(){
+            alert("click the audio player to hear the clip!");
+        }
+        function playSound3(){
+            alert("click the audio player to hear the clip!");
+        }
+        </script>
+    <script src="init.js"></script>
+        </body>
